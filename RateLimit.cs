@@ -51,6 +51,8 @@ public class RateLimit
             var clientId = Math.Abs(token.GetHashCode());
             res.Headers.Add("X-Client-ID", clientId.ToString());
 
+            res.Headers.Add("X-RateLimit-Limit", limit.ToString());
+
             var reset = Math.Round(nextReset.Subtract(DateTime.Now).TotalSeconds);
             res.Headers.Add("X-RateLimit-Reset", reset + "s");
 

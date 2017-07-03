@@ -36,6 +36,7 @@ Authorization → Bearer xyz
 ```
 200 OK
 
+X-RateLimit-Limit → 5
 X-RateLimit-Remaining → 4
 X-RateLimit-Reset → 11s
 X-Client-ID → 1266329982
@@ -44,6 +45,7 @@ X-Client-ID → 1266329982
 ```
 429 Too Many Requests
 
+X-RateLimit-Limit → 5
 X-RateLimit-Remaining → 0
 X-RateLimit-Reset → 9s
 X-Client-ID → 1266329982
